@@ -6,6 +6,9 @@ with open('archivos/Libro5.csv') as csv_file:
     for linea in lector:
         matriz.append(linea)
 
+#  0       |  1     | 2        | 3
+#  --------------------------------------
+#  nombre | precio | cantidad | subtotal
 print(matriz)
 
 # agregar una columna
@@ -20,3 +23,9 @@ for linea in matriz:
     total = total + int(linea[3])
 
 print(f"el total es {total}")
+
+# transformar una columna
+for linea in matriz:
+    linea[0]=linea[0].upper() # convertir la primera columna en mayuscula
+
+print(matriz)
